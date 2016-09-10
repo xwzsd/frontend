@@ -1,0 +1,24 @@
+<div class="row mb-10">
+  <div class="col-xs-12">
+    <a href="/#/category-alias">
+       Go Back
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h2> Category Detail </h2>
+  <form (ngSubmit)="onSubmit()" class="form-horizontal" [ngFormModel]="form">
+    <div class="col-xs-12 text-right">
+      <span [hidden]="form.valid">
+        <label class="label label-danger mr-5">Invalid</label>
+      </span>
+      <button type="submit" class="btn btn-default" [disabled]="!form.valid">
+        Save Changes
+      </button>
+    </div>
+
+    <category-form [category]="category" [form]="form"></category-form>
+
+  </form>
+</div>

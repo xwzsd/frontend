@@ -1,0 +1,26 @@
+<h2>Items ({{totalCount}})</h2>
+
+<table class="table table-strip table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="#item of items">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.description}}</td>
+      <td>{{item.createdAt}}</td>
+      <td>{{item.updatedAt}}</td>
+      <td><a href="#/item/alias/{{item.id}}">Edit</a></td>
+    </tr>
+  </tbody>
+</table>
